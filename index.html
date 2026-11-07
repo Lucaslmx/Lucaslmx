@@ -1,0 +1,227 @@
+<!--
+    Atividade da Agenda 15 - Portfólio pessoal.
+    Página responsiva para apresentar o perfil, os estudos e os projetos de Lucas Melo.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Lucas Melo, estudante de Desenvolvimento de Sistemas.">
+    <title>Lucas Melo | Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* As variáveis mantêm as cores da página reunidas em um só lugar. */
+        :root {
+            --altura-slide: 420px;
+            --movimento-card: 0.2s ease;
+        }
+
+        /* O espaço interno ajuda os textos do carousel a ficarem centralizados. */
+        .carousel-item {
+            min-height: var(--altura-slide);
+            padding: 100px 0;
+        }
+
+        /* Esta transição cria o recurso adicional de interação nos cartões. */
+        .card-habilidade {
+            transition: transform var(--movimento-card), box-shadow var(--movimento-card);
+        }
+
+        /* O cartão sobe levemente quando o cursor passa sobre ele. */
+        .card-habilidade:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <header>
+        <!-- O menu aponta para cada seção para facilitar a navegação pela página. -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#inicio">Lucas Melo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- O carousel destaca o portfólio e oferece atalhos para outras seções. -->
+        <div id="inicio" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#inicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner text-white text-center">
+                <div class="carousel-item active bg-primary">
+                    <div class="container">
+                        <h1 class="display-4 fw-bold">Olá, eu sou o Lucas</h1>
+                        <p class="lead">Estudante de Desenvolvimento de Sistemas e entusiasta de tecnologia.</p>
+                        <a href="#projetos" class="btn btn-light">Ver projetos</a>
+                    </div>
+                </div>
+                <div class="carousel-item bg-dark">
+                    <div class="container">
+                        <h2 class="display-5 fw-bold">Aprender fazendo</h2>
+                        <p class="lead">Curiosidade, prática e projetos para aprender fazendo.</p>
+                        <a href="#habilidades" class="btn btn-outline-light">O que estou estudando</a>
+                    </div>
+                </div>
+                <div class="carousel-item bg-secondary">
+                    <div class="container">
+                        <h2 class="display-5 fw-bold">Bem-vindo!</h2>
+                        <p class="lead">Conheça alguns projetos e coisas que venho explorando.</p>
+                        <a href="#contato" class="btn btn-light">Entre em contato</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+
+        <!-- A seção apresenta a formação e a área de interesse do aluno. -->
+        <section id="perfil" class="bg-white py-5">
+            <div class="container py-3">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-4 text-center">
+                        <div class="bg-primary-subtle rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                            style="width: 220px; height: 220px;">
+                            <span class="display-3 text-primary fw-bold">LM</span>
+                        </div>
+                        <h3 class="fw-bold mt-3 mb-1">Lucas Melo</h3>
+                        <p class="text-muted">Estudante de Desenvolvimento de Sistemas</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="text-primary fw-bold">Perfil</h2>
+                        <p class="fs-5 text-secondary">Sou entusiasta de tecnologia e gosto de explorar diferentes
+                            áreas do desenvolvimento de sistemas. Aprendo colocando a mão na massa: testo ideias,
+                            descubro como as partes se conectam e transformo a curiosidade em projetos.</p>
+                        <p class="text-secondary">No momento, tenho interesse em integração de inteligência artificial
+                            a sistemas e aplicações. Quero entender como esses recursos podem fazer parte de soluções
+                            úteis no dia a dia.</p>
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100"><div class="card-body">
+                                    <h5 class="fw-bold">Formação</h5><p class="text-muted mb-0">Técnico em Desenvolvimento de Sistemas</p>
+                                </div></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100"><div class="card-body">
+                                    <h5 class="fw-bold">Interesse</h5><p class="text-muted mb-0">Integração de IA em sistemas</p>
+                                </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Esta seção de habilidades é o conteúdo novo acrescentado ao modelo da aula. -->
+        <section id="habilidades" class="py-5">
+            <div class="container py-3">
+                <div class="text-center mb-4">
+                    <h2 class="text-primary fw-bold">Habilidades</h2>
+                    <p class="text-muted">Conteúdos que estou estudando no curso.</p>
+                </div>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-sm-6 col-lg-3"><div class="card card-habilidade h-100"><div class="card-body">
+                        <h3 class="h5">HTML</h3><p class="text-muted mb-0">Estrutura das páginas web.</p>
+                    </div></div></div>
+                    <div class="col-sm-6 col-lg-3"><div class="card card-habilidade h-100"><div class="card-body">
+                        <h3 class="h5">CSS</h3><p class="text-muted mb-0">Estilos e organização visual.</p>
+                    </div></div></div>
+                    <div class="col-sm-6 col-lg-3"><div class="card card-habilidade h-100"><div class="card-body">
+                        <h3 class="h5">Bootstrap</h3><p class="text-muted mb-0">Componentes e páginas responsivas.</p>
+                    </div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Os cards levam aos repositórios públicos dos projetos apresentados. -->
+        <section id="projetos" class="bg-white py-5">
+            <div class="container py-3">
+                <div class="text-center mb-5">
+                    <h2 class="text-primary fw-bold">Projetos</h2>
+                    <p class="text-muted mb-0">Alguns trabalhos feitos durante meus estudos.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">MyContacts - Frontend</h3>
+                                <p class="card-text text-muted">Frontend de uma aplicação de contatos, desenvolvido durante os estudos do curso JStack. Um projeto antigo, que hoje não está em manutenção.</p>
+                                <a href="https://github.com/Lucaslmx/MyContacts-Frontend" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">CPUMiner para Raspberry Pi</h3>
+                                <p class="card-text text-muted">Adaptações e otimizações do cpuminer-opt para uso no Raspberry Pi. Um experimento antigo, sem manutenção ativa.</p>
+                                <a href="https://github.com/Lucaslmx/cpuminer-opt-RPI" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Os links de contato permitem abrir o e-mail e o perfil do GitHub. -->
+        <section id="contato" class="py-5">
+            <div class="container py-3">
+                <div class="text-center mb-4">
+                    <h2 class="text-primary fw-bold">Contato</h2>
+                    <p class="text-muted">Quer conversar sobre algum projeto? Entre em contato.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm border-0 p-4 text-center">
+                            <h3 class="h4 fw-bold">Fale comigo</h3>
+                            <p class="text-muted">Você pode me encontrar pelo GitHub ou enviar um e-mail.</p>
+                            <div class="d-grid gap-2">
+                                <a href="mailto:16124733+Lucaslmx@users.noreply.github.com" class="btn btn-outline-primary">Enviar e-mail</a>
+                                <a href="https://github.com/Lucaslmx" class="btn btn-dark" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p class="mb-1">© 2026 Lucas Melo - Portfólio</p>
+            <small>Desenvolvido com HTML, CSS e Bootstrap</small>
+        </div>
+    </footer>
+
+    <!-- O JavaScript do Bootstrap habilita o menu recolhível e o carousel. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
